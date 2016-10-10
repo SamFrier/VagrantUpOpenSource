@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set f=ruby :
 
+AGENTS=2
+
 Vagrant.configure(2) do |config|
     config.vm.box = "chad-thompson/ubuntu-trusty64-gui"
     config.vm.synced_folder "shared", "/tmp/shared"
@@ -21,33 +23,15 @@ Vagrant.configure(2) do |config|
         end
     end
 
-    config.vm.define "agent1" do |agent1|
-        agent1.vm.hostname = "vuagent1.qac.local"
-        agent1.vm.network :public_network, ip: "192.168.1.21"
-        agent1.vm.provision :shell, path: "bootstrap_agent.sh"
+    AGENTS.times do |i|
+        config.vm.define "agent#{i+1}" do |agent|
+            agent.vm.hostname = "vuagent#{i+1}.qac.local"
+            agent.vm.network :public_network, ip: "192.168.1.2#{i+1}"
+            agent.vm.provision :shell, path: "bootstrap_agent.sh"
 
-        agent1.vm.provider :virtualbox do |vbox|
-            vbox.name = "VUAgent 1"
-        end
-    end
-
-    config.vm.define "agent2" do |agent2|
-        agent2.vm.hostname = "vuagent2.qac.local"
-        agent2.vm.network :public_network, ip: "192.168.1.22"
-        agent2.vm.provision :shell, path: "bootstrap_agent.sh"
-
-        agent2.vm.provider :virtualbox do |vbox|
-            vbox.name = "VUAgent2"
-        end
-    end
-
-    config.vm.define "agent3" do |agent3|
-        agent3.vm.hostname = "vuagent3.qac.local"
-        agent3.vm.network :public_network, ip: "192.168.1.23"
-        agent3.vm.provision :shell, path: "bootstrap_agent.sh"
-
-        agent3.vm.provider :virtualbox do |vbox|
-            vbox.name = "VUAgent3"
+            agent1.vm.provider :virtualbox do |vbox|
+                vbox.name = "VUAgent #{i+1}"
+            end
         end
     end
 

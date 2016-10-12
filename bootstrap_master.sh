@@ -33,6 +33,9 @@ echo "}">>$SITE/site.pp
 #Copy over the necessary modules
 sudo cp -r /tmp/shared/modules /etc/puppet
 
+# make sure scripts have the proper line endings
+sudo dos2unix /etc/puppet/modules/{bamboo,java,jenkins,maven,mysql,nexus,zabbix}/files/*.sh
+
 # install zabbix server
 sudo cp /tmp/shared/{zabbix-3.2.1.tar.gz,installZabbixServer.sh} /opt/
 cd /opt/

@@ -37,4 +37,4 @@ zabbix_server
 
 # might need to do some stuff with the PHP frontend here?
 
-echo "Zabbix Server installed"
+echo "Zabbix Server installed."

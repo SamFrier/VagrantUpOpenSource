@@ -12,10 +12,7 @@ sudo useradd -g zabbix zabbix
 
 # install mysql on master
 sudo puppet apply /etc/puppet/modules/mysql/tests/init.pp
-sudo apt-get install -y mysql-client #libmysqlclient-dev libmysqld-dev # this probably renders the line above redundant
-#sudo cp /tmp/shared/modules/mysql/files/{install_mysql.sh,mysql-server_5.7.15-1ubuntu14.04_amd64.deb-bundle.tar} /opt/
-#sudo mv /opt/mysql-server_5.7.15-1ubuntu14.04_amd64.deb-bundle.tar /opt/mysql.tar
-#sudo ./install_mysql.sh
+sudo apt-get install -y mysql-client
 
 # create zabbix database
 sudo cp /tmp/shared/setupDatabase.sql /opt/
@@ -39,4 +36,4 @@ zabbix_server
 
 # might need to do some stuff with the PHP frontend here?
 
-echo "Zabbix Server installed"
+echo "Zabbix Server installed."

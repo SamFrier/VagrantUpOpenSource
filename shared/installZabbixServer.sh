@@ -16,20 +16,21 @@ sudo apt-get install -y mysql-client
 
 # create zabbix database
 sudo cp /tmp/shared/setupDatabase.sql /opt/
-sudo mysql -uroot -pvagrant < setupDatabase.sql
+sudo mysql -u root < setupDatabase.sql
 cd zabbix-3.2.1/database/mysql/
-sudo mysql -uzabbix -pvagrant zabbix < schema.sql
-sudo mysql -uzabbix -pvagrant zabbix < images.sql
-sudo mysql -uzabbix -pvagrant zabbix < data.sql
+sudo mysql -u zabbix zabbix < schema.sql
+sudo mysql -u zabbix zabbix < images.sql
+sudo mysql -u zabbix zabbix < data.sql
 
 # configure sources
 cd ../..
-sudo ./configure --enable-server --with-mysql #--with-net-snmp --with-libcurl --with-libxml2
+sudo ./configure --enable-server --with-mysql
 
 # install everything
 sudo make install
 
 # edit config files
+
 
 # start server daemon
 zabbix_server

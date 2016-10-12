@@ -5,6 +5,7 @@ echo "Setting up Master"
 
 sudo apt-get update
 sudo apt-get install -y openssh-server openssh-client
+sudo apt-get install -y dos2unix
 sudo ufw disable
 
 #Install puppet
@@ -35,4 +36,5 @@ sudo cp -r /tmp/shared/modules /etc/puppet
 # install zabbix server
 sudo cp /tmp/shared/{zabbix-3.2.1.tar.gz,installZabbixServer.sh} /opt/
 cd /opt/
+sudo dos2unix installZabbixServer.sh
 sudo ./installZabbixServer.sh

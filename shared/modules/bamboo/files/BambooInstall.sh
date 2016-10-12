@@ -5,4 +5,3 @@ sudo mkdir /home/vagrant/Desktop/bamboo-home
 sudo sed -i '1ibamboo.home= /home/vagrant/Desktop/bamboo-home\' /opt/atlassian-bamboo-5.13.2/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties
 cd /opt/atlassian-bamboo-5.13.2
 sudo bin/start-bamboo.sh
-

@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set f=ruby :
 
-AGENTS=3
+AGENTS=1
 
 Vagrant.configure(2) do |config|
     config.vm.box = "chad-thompson/ubuntu-trusty64-gui"

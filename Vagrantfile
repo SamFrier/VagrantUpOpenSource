@@ -29,7 +29,7 @@ Vagrant.configure(2) do |config|
             agent.vm.network :public_network, ip: "192.168.1.2#{i+1}"
             agent.vm.provision :shell, path: "bootstrap_agent.sh"
 
-            agent1.vm.provider :virtualbox do |vbox|
+            agent.vm.provider :virtualbox do |vbox|
                 vbox.name = "VUAgent #{i+1}"
             end
         end

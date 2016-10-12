@@ -1,7 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# copy + unzip zabbix server files
-sudo cp /tmp/shared/zabbix-3.2.1.tar.gz /opt/
+echo "Installing Zabbix Server"
+
+# unzip zabbix server files
 cd /opt/
 sudo tar zxvf zabbix-3.2.1.tar.gz
 
@@ -35,3 +36,5 @@ sudo make install
 
 # start server daemon
 zabbix_server
+
+echo "Zabbix Server installed"

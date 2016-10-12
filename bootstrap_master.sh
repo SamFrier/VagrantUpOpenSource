@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 SITE='/etc/puppet/manifests'
 echo "Setting up Master"
@@ -30,3 +30,8 @@ echo "}">>$SITE/site.pp
 
 #Copy over the necessary modules
 sudo cp -r /tmp/shared/modules /etc/puppet
+
+# install zabbix server
+sudo cp /tmp/shared/{zabbix-3.2.1.tar.gz,installZabbixServer.sh} /opt/
+cd /opt/
+sudo ./installZabbixServer.sh

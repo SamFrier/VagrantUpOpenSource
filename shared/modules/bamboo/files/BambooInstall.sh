@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 cd /opt
 sudo tar zxvf atlassian-bamboo-5.13.2.tar.gz
 sudo mkdir /home/vagrant/Desktop/bamboo-home

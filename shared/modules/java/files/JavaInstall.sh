@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 cd /opt
 sudo tar zxvf java.tar.gz
 sudo update-alternatives --install /usr/bin/java java /opt/jdk1.8.0_45/bin/java 100

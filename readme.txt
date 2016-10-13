@@ -22,4 +22,5 @@ NOTE: the "files" directories for each module don't currently contain the requir
 - nexus: nexus-3.0.2-02-unix.tar.gz
 
 Other things to note:
-- The MySQL databases created do not have any root password set
+- The MySQL databases created on the agents do not have any root password set
+- The Zabbix database on the master has user 'zabbix' with password 'vagrantup'

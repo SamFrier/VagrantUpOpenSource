@@ -37,7 +37,8 @@ sudo cp -r /tmp/shared/modules /etc/puppet
 sudo dos2unix /etc/puppet/modules/{bamboo,java,jenkins,maven,mysql,nexus,zabbix}/files/*.sh
 
 # install zabbix server
-sudo cp /tmp/shared/{zabbix-3.2.1.tar.gz,installZabbixServer.sh} /opt/
+sudo cp /tmp/shared/installZabbixServer.sh /opt/
+sudo cp /tmp/shared/modules/zabbix/files/zabbix-3.2.1.tar.gz /opt/
 cd /opt/
-sudo dos2unix installZabbixServer.sh
+sudo dos2unix *.sh
 sudo ./installZabbixServer.sh

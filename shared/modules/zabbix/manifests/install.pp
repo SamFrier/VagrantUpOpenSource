@@ -18,6 +18,7 @@ exec { 'install_zabbix':
 provider => shell,
 command => '/opt/zabbixAgentInstall2.sh',
 require => [File['/opt/zabbixAgentInstall2.sh'], File['/opt/zabbix-3.2.1.tar.gz']],
+onlyif => '! zabbix_agentd -V',
 }
 }
 

@@ -2,7 +2,7 @@
 
 echo "Setting up an agent"
 
-sudo apt-get update
+sudo apt-get -y update
 sudo apt-get install -y openssh-server openssh-client
 sudo ufw disable
 

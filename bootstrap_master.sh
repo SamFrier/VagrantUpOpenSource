@@ -3,7 +3,7 @@
 SITE='/etc/puppet/manifests'
 echo "Setting up Master"
 
-sudo apt-get update
+sudo apt-get -y update
 sudo apt-get install -y openssh-server openssh-client
 sudo apt-get install -y dos2unix
 sudo ufw disable

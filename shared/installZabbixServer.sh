@@ -34,6 +34,17 @@ sudo sed -i 's/# DBPassword=/# DBPassword=\n\nDBPassword=vagrantup/g' /usr/local
 # start server daemon
 sudo zabbix_server
 
-# might need to do some stuff with the PHP frontend here?
+# setup apache web server and php
+sudo apt-get install -y apache2 apache2-doc apache2-utils
+sudo sed -i 's/KeepAlive On/KeepAlive Off/g' /etc/apache2/apache2.conf
+sudo a2dissite 000-default.conf
+sudo service apache2 reload
+sudo apt-get install -y php5
 
-echo "Zabbix Server installed."
+# setup web-based frontend
+sudo mkdir /var/www/zabbix
+cd frontends/php
+sudo cp -a . /var/www/zabbix
+sudo service apache2 restart
+
+echo "Zabbix Server installed. Visit http://<server_ip>/zabbix to complete setup."

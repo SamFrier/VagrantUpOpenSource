@@ -6,6 +6,8 @@ Description of files in this repo:
 - response.varfile: required to set up Jira without user input
 - shared: the shared folder that will be loaded onto the master VM
     - shared/modules: Puppet modules that will be copied into the master's Puppet directory
+    - shared/installZabbixServer.sh: sets up the Zabbix server on the master VM
+    - shared/setupDatabase.sql: sets up the database for the Zabbix server
 
 To automatically set up the virtual machines and install all modules, simply type "vagrant up" in the top-level directory of this repo.
 Before doing this, however, please ensure the following:

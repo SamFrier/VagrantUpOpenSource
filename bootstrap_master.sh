@@ -42,3 +42,7 @@ sudo cp /tmp/shared/modules/zabbix/files/zabbix-3.2.1.tar.gz /opt/
 cd /opt/
 sudo dos2unix *.sh
 sudo ./installZabbixServer.sh
+
+sudo ifdown eth1
+sudo ifup eth1
+sudo ifconfig eth1 192.168.1.20

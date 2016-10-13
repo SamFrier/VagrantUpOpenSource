@@ -14,7 +14,7 @@ ADDRESS=$(facter ipaddress_eth1)
 NAME=$(facter fqdn)
 sed -i "1s/^/$ADDRESS	$NAME	puppet\n/" /etc/hosts
 sed -i "1s/^/127.0.0.1	$NAME	puppet\n/" /etc/hosts
-sed -i "1s/^/192.168.1.20	vumaster.qac.local	puppetmaster\n/" /etc/hosts
+sed -i "1s/^/192.168.1.108	vumaster.qac.local	puppetmaster\n/" /etc/hosts
 
 #Edit the conf file
 echo "Editing the puppet.conf file..."

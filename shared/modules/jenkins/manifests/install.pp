@@ -17,6 +17,7 @@ before => Exec['installJenkins'],
 }
 
 exec {'installJenkins':
+timeout => 900,
 provider => shell,
 command => '/opt/JenkinsInstall.sh',
 onlyif => '! sudo service jenkins status',

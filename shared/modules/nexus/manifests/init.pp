@@ -20,6 +20,7 @@ class nexus {
 		cwd => '/opt',
 		path => '/usr/bin',
 		provider => shell,
+		require => Exec['install_java'],
 		command => './installNexus.sh',
                 onlyif => '! -d /opt/nexus-3.0.2-02',
 	}

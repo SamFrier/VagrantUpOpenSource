@@ -11,4 +11,9 @@ cd zabbix-3.2.1
 sudo ./configure --enable-agent
 
 sudo make install
+
+# edit config file (not tested!!)
+sudo sed 's/Server=\(.*\)\n/Server=192.168.1.20\n/g' /usr/local/etc/zabbix_agentd.conf
+
 #test using zabbix_agentd -V
+sudo zabbix_agentd

@@ -1,13 +1,13 @@
 Description of files in this repo:
 
-- Vagrantfile: sets up the master VM and 3 agent VMs on a single machine.
+- Vagrantfile: sets up the master VM and a number of agent VMs on a single machine.
 - bootstrap_master.sh: does any relevant setup on the master VM
 - bootstrap_agent.sh: does any relevant setup on any and all agent VMs
 - response.varfile: required to set up Jira without user input
 - shared: the shared folder that will be loaded onto the master VM
     - shared/modules: Puppet modules that will be copied into the master's Puppet directory
 
-To automatically set up the virtual machines and install all modules, simply type "vagrant up" in the top-level directory of this repo.
+To automatically set up the virtual machines and install all modules, simply double click the startup.sh file.
 Before doing this, however, please ensure the following:
 - You have the Ubuntu disk image present in your computer's C:/Users/[user]/.vagrant.d/boxes directory
 

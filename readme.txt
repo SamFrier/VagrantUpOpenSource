@@ -1,6 +1,7 @@
 Description of files in this repo:
 
 - Vagrantfile: sets up the master VM and a number of agent VMs on a single machine.
+    - You can set the number of agents using the AGENTS variable
 - bootstrap_master.sh: does any relevant setup on the master VM
 - bootstrap_agent.sh: does any relevant setup on any and all agent VMs
 - response.varfile: required to set up Jira without user input

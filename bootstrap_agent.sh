@@ -27,10 +27,3 @@ sudo service puppet stop
 sudo service puppet start
 sudo puppet agent --enable
 sudo puppet agent -t
-
-name=$(facter fqdn)
-#refresh later
-nohup firefox -new-window ${name}:8080
-nohup firefox -new-tab ${name}:8081
-nohup firefox -new-tab ${name}:8082
-nohup firefox -new-tab ${name}:8085

@@ -16,6 +16,7 @@ Before doing this, however, please ensure the following:
     - jenkins: jenkins_2.1_all.deb
     - jira: jira.bin and response.varfile
     - maven.tar.gz
+    - atlassian-bamboo-5.13.2.tar.gz
     - mysql-server_5.7.15-1ubuntu14.04_amd64.deb-bundle.tar
     - nexus-3.0.2-02-unix.tar.gz
     - zabbix-3.2.1.tar.gz
